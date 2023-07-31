@@ -85,6 +85,7 @@ class MyBatisPlusApplicationTests {
         //SELECT id,name,age,email FROM user WHERE id=?
         User user = userMapper.selectById(5L);
         log.info("Selected user: " + user);
+        assertEquals("Lance", user); //fail | pass
     }
 
     @Test
